@@ -1,7 +1,9 @@
 # SPDX-License-Identifier: BSD-2-Clause
-"""Converts an Annotated SPIN counter-example to program test code"""
+# Runs SPIN to generate test code for all defined scenarios
 
-# Copyright (C) 2019-2021 Trinity College Dublin (www.tcd.ie)
+# Copyright (C) 2021 Trinity College Dublin (www.tcd.ie)
+#               Robert Jennings
+#               Andrew Butterfield
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions
@@ -24,26 +26,12 @@
 # ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 # POSSIBILITY OF SUCH DAMAGE.
 
-import src.spin2test
+# This should be specialised for your setup, as refine-config.yml,
+# located in the same directory as testbuilder.py for global settings
+# or in the models directory for local settings
 
-#
-
-import argparse
-
-#
-
-if __name__ == '__main__':
-    claparser = argparse.ArgumentParser(
-        description="Promela to Program Test Generator")
-    claparser.add_argument("root", help="Model filename root")
-    claparser.add_argument("pre_amble", help="Model pre-amble file")
-    claparser.add_argument("post_amble", help="Model post-amble file")
-    claparser.add_argument("run", help="Model test run file")
-    claparser.add_argument("refine", help="Model test refine file")
-    claparser.add_argument("testfile", help="Model helper file")
-    claparser.add_argument("tstno", help="Model test number")
-
-    cl_args = claparser.parse_args()
-    src.spin2test.main(cl_args.tstno, '', cl_args.root, cl_args.pre_amble,
-                       cl_args.post_amble, cl_args.run, cl_args.refine,
-                       cl_args.testfile)
+testfiletype: .c #tr-<model><testfiletype>
+runfile: -run.h #<model><runfile>
+preamble: -pre.h #<model><preamble>
+postamble: -post.h #<model><postamble>
+refinefile: -rfn.yml #<model><refinefile>
