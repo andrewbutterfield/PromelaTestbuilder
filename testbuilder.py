@@ -72,11 +72,11 @@ def all_steps(models, model_to_path, models_dir):
         generate_test_files(model_name, genpath, model_root, 
                             config["spin2test"], refine_config)
         # TODO: runs in <model_name>/gen - do this by changing path in call
-        copy(model_root, genpath, config["testcode"], config["rtems"],
+        copy(model_root, genpath, config["testcode"], config["osroot"],
              config["testyaml"], config["testsuite"],
              refine_config["testfiletype"])
 
-    compile(config["rtems"])
+    compile(config["osroot"])
     run_simulator(config["simulator"], config["simulatorargs"],
                   config["testexe"], config["testsuite"])
 
@@ -383,8 +383,8 @@ def get_config(models_dir, model_name=""):
     if "testsuite" not in config.keys():
         config["testsuite"] = "model-0"
     missing_keys = {
-                    "spin2test", "modelsfile", "rtems", "rsb", "simulator",
-                    "testyamldir", "testcode", "testexedir", "simulatorargs",
+                    "spin2test", "modelsfile", "osroot", "tools", "simulator",
+                    "testdecl", "testcode", "testexedir", "simulatorargs",
                     "spinallscenarios"
                     } - config.keys()
     if missing_keys:
@@ -393,7 +393,7 @@ def get_config(models_dir, model_name=""):
         for key in missing_keys:
             print(key)
         sys.exit(1)
-    config["testyaml"] = f"{config['testyamldir']}{config['testsuite']}.yml"
+    config["testyaml"] = f"{config['testdecl']}{config['testsuite']}.yml"
     config["testexe"] = f"{config['testexedir']}ts-{config['testsuite']}.exe"
     return config
 
@@ -524,11 +524,11 @@ def main():
 
     if sys.argv[1] == "copy":
         copy(sys.argv[2], model_to_path[sys.argv[2]], config["testcode"],
-             config["rtems"], config["testyaml"], config["testsuite"],
+             config["osroot"], config["testyaml"], config["testsuite"],
              refine_config["testfiletype"])
 
     if sys.argv[1] == "compile":
-        compile(config["rtems"])
+        compile(config["osroot"])
 
     if sys.argv[1] == "run":
         run_simulator(config["simulator"], config["simulatorargs"],
