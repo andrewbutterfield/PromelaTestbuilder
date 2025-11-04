@@ -34,8 +34,8 @@
 spin2test: <spin2test_directory>/spin2test.py
 modelsfile: <formal_directory>/promela/models/models.yml
 osroot: <path-to-main-rtems-directory>  # rtems.git, or ..../modules/rtems/
-tools: <tools-build_directory>/rtems/6/bin/
-simulator: <path-to>/sparc-rtems6-sis
+tools: <tools-build_directory>/bin/
+simulator: <path-to>/<simulator>
 testdecl: <osroot>/spec/build/testsuites/validation/ # directory containing <modelname>.yml
 testcode: <osroot>/testsuites/validation/
 testexedir:  <osroot>/build/.../testsuites/validation/ # directory containing ts-<modelname>.exe
