@@ -45,9 +45,11 @@ You need to activate this virtual environment to use the toolset.
 
 The top-level program is `testbuilder.py`. 
 
-It relies on a configuration file `testbuilder.yml` that defines various key names/paths related to your software installation. A template file `testbuilder-template.yml` is provided. This should be edited to reflect your setup, and then saved as `testbuilder.yml`.
+It relies on a few configuration files (`testbuilder.yml`,`refine_config.yml`) that define various aspects of your software installation. Template files for these are supplied in `templates/`. These should be edited to reflect your setup, renamed to remove the `-template`, and then saved at the top-level of this repository.
 
-Another configuration file `refine-config.yml` defines file names for files used during the test-generation process. A template file `refine-config-template.yml` is provided. This should be edited to reflect your setup, and then saved as `refine-config.yml`.
+Configuration file `testbuilder.yml` defines various key names/paths related to your target software installation.
+
+Configuration file `refine-config.yml` defines file names conventions for files used during the test-generation process.
 
 To simplify matters, it helps to create a short alias for the full pathname to `testbuilder.py`. This should be defined in `.bashrc` or similar.
 
