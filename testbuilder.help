@@ -34,7 +34,7 @@ A `<command>` is one of the following:
 `compile` rebuilds the RTEMS test executable
 
 `run`
-    - runs the tests in the SIS simulator
+    - runs the tests in indicated simulator
     - saves results to `model-0-test.log` in the current directory
 
 

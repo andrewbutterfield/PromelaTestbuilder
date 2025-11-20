@@ -2,7 +2,7 @@
 # SPDX-License-Identifier: BSD-2-Clause
 """Runs SPIN to generate test code for all defined scenarios"""
 
-# Copyright (C) 2021-24 Trinity College Dublin (www.tcd.ie)
+# Copyright (C) 2021-25 Trinity College Dublin (www.tcd.ie)
 #               Andrew Butterfield
 #               James Gooding Hunt
 #               Robert Jennings
@@ -458,7 +458,7 @@ def main():
     source_dir = os.path.dirname(os.path.realpath(__file__))
     models_dir = os.getcwd()
     print(f"Testbuilder running in:\n    {models_dir}")
-    if not (len(sys.argv) == 2 and sys.argv[1] == "help"
+    if not (   len(sys.argv) == 2 and sys.argv[1] == "help"
             or len(sys.argv) == 2 and sys.argv[1] == "locations"
             or len(sys.argv) >= 3 and sys.argv[1] == "allsteps"
             or len(sys.argv) == 3 and sys.argv[1] == "clean"
