@@ -34,7 +34,7 @@ logger = logging.getLogger (__name__)
 class command:
 
     def __init__(self, ref_dict
-                 , outputLOG = False
+                 , outputLOG = True
                  , annoteComments = True
                  , outputSWITCH = True
                  ):

@@ -167,7 +167,9 @@ def generate_spin_files( model_name, model_dir, model_root
     subprocess.run(f"spin {spinallscenarios} {model_root}.pml",
                    check=True, shell=True)
 # the following glob finds all .trails in model, not model/gen
-    no_of_trails = len(glob.glob(f"{model_root}*.trail"))
+    trails = glob.glob(f"{model_root}*.trail")
+    print(f"TRAILS:\n{trails}\n")
+    no_of_trails = len(trails)
     if no_of_trails == 0:
         print("no trail files generated")
     else:
