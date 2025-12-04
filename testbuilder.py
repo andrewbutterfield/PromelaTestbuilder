@@ -237,7 +237,7 @@ def generate_testcase_file(model_root, refine_config, no_of_trails):
               f"will not be generated")
 
 # TODO:  runs in <model_name> making use of gen/ 
-def copy(model_root, model_path, codedir, rtems, modfile, testsuite_name,
+def copy(model_root, model_path, codedir, osroot, modfile, testsuite_name,
          test_file_extension):
     """Copies C testfiles to test directory and updates the model_root file """
 
@@ -245,7 +245,7 @@ def copy(model_root, model_path, codedir, rtems, modfile, testsuite_name,
     print(f"** model_root = {model_root}")
     print(f"** model_path = {model_path}")
     print(f"** codedir = {codedir}")
-    print(f"** rtems = {rtems}")
+    print(f"** osroot = {osroot}")
     print(f"** modfile = {modfile}")
     print(f"** testsuite_name = {testsuite_name}")
     print(f"** test_file_extension = {test_file_extension}")
@@ -261,7 +261,7 @@ def copy(model_root, model_path, codedir, rtems, modfile, testsuite_name,
         os.remove(file)
 
     # Copy new test files
-    print(f"Copy new files for {model_root} to {rtems}")
+    print(f"Copy new files for {model_root} to {osroot}")
 
     # Copy fixed model_root top-level files
     fixedhfiles = glob.glob(f"tr-{model_root}-model.h")
@@ -271,7 +271,7 @@ def copy(model_root, model_path, codedir, rtems, modfile, testsuite_name,
     # fixedcfiles += glob.glob(f"../common/tx-{model_root}{test_file_extension}")
     fixedfiles = fixedhfiles + fixedcfiles
     for file in fixedfiles:
-        shutil.copyfile(file, f"{rtems}testsuites/validation/{file}")
+        shutil.copyfile(file, f"{osroot}testsuites/validation/{file}")
 
     # Copy files common to all models
     os.chdir("../common")
@@ -280,7 +280,7 @@ def copy(model_root, model_path, codedir, rtems, modfile, testsuite_name,
     commonhfiles = glob.glob(f"tx*.h")
     commonfiles = commonhfiles + commoncfiles 
     for file in (commonhfiles+commoncfiles):
-        shutil.copyfile(file, f"{rtems}testsuites/validation/{file}")
+        shutil.copyfile(file, f"{osroot}testsuites/validation/{file}")
     os.chdir(model_path)
 
     # Copy per-scenario test runners
@@ -288,7 +288,7 @@ def copy(model_root, model_path, codedir, rtems, modfile, testsuite_name,
     genfiles = glob.glob(f"tr-{model_root}-*{test_file_extension}")
     os.chdir("..")
     for file in genfiles:
-        shutil.copyfile(f"gen/{file}", f"{rtems}testsuites/validation/{file}")
+        shutil.copyfile(f"gen/{file}", f"{osroot}testsuites/validation/{file}")
 
     # Update {testsuite name}.yml
     print(f"Updating {testsuite_name}.yml for {model_root}")
