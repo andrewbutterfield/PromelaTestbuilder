@@ -476,6 +476,11 @@ def main():
             print(helpfile.read())
         sys.exit(1)
 
+    if sys.argv[1] == "help":
+        with open("testbuilder.help") as helpfile:
+            print(helpfile.read())
+            sys.exit(1)
+
     if not Path.exists(Path(f"{source_dir}/spin2test.py")) \
             or not Path.exists(Path(f"{source_dir}/env")):
         print("Setup incomplete...")
@@ -497,10 +502,6 @@ def main():
             refine_config = get_refine_config(models_dir, sys.argv[2],
                                               model_to_path[sys.argv[2]],
                                               model_to_roots[sys.argv[2]])
-
-    if sys.argv[1] == "help":
-        with open(f"{models_dir}/testbuilder.help") as helpfile:
-            print(helpfile.read())
 
     if sys.argv[1] == "locations":
         print("testbuilder.yml:")
