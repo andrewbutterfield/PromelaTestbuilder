@@ -1,4 +1,4 @@
-This tool can generate and remove RTEMS test files from a Promela model
+This tool manages the process of generating test code from Promela models
 
 In order to generate test files the following input files are required:
     `<model>.pml`
@@ -17,21 +17,21 @@ A `<command>` is one of the following:
 `locations` will display the contents of `testbuilder.yml`
 
 `zero [model]` 
-  - removes all generated C filenames from the RTEMS configuration yaml file. 
-  - does NOT remove the test sources from the RTEMS test source directory
+  - removes all generated C filenames from the test configuration system files. 
+  - does NOT remove the test sources from the test source directories.
 
 `clean <model> | allmodels` 
   - removes generated files from the relevant model source directories
 
 `spin <model>` will run SPIN to find all scenarios
 
-`gentests <model>` will produce C test code from the `spin` outcome.
+`gentests <model>` will produce test code from the `spin` outcome.
 
 `copy <model>`
-   - copies the generated  C files to the relevant RTEMS test source directory
-   - updates the relevant RTEMS configuration yaml file
+   - copies the generated  test code files to the relevant test source directory
+   - updates the relevant test configuration system files
 
-`compile` rebuilds the RTEMS test executable
+`compile` rebuilds the test executable
 
 `run`
     - runs the tests in indicated simulator
@@ -43,5 +43,5 @@ A `<command>` is one of the following:
      for desired model(s)
 
 `archive <model>`` 
-  copies generated spn, trail, C, and test log files
+  copies generated spn, trail, code, and test log files
   to the archive sub-directory of the current model directory.
