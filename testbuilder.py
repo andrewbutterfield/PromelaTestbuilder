@@ -505,7 +505,24 @@ def main():
 
     if sys.argv[1] == "locations":
         print("testbuilder.yml:")
-        print(f"{config}")
+        loc = config["spin2test"]
+        print(f"spin2test   =  {loc}")
+        loc = config["modelsfile"]
+        print(f"modelsfile  =  {loc}")
+        loc = config["osroot"]
+        print(f"osroot      =  {loc}")
+        loc = config["tools"]
+        print(f"tools       =  {loc}")
+        loc = config["simulator"]
+        print(f"simulator   =  {loc}")
+        loc = config["testdecl"]
+        print(f"testdecl    =  {loc}")
+        loc = config["testcode"]
+        print(f"testcode    =  {loc}")
+        loc = config["testexedir"]
+        print(f"testexedir  =  {loc}")
+        loc = config["testsuite"]
+        print(f"testsuite   =  {loc}")
         sys.exit(None)
 
     if sys.argv[1] == "allsteps":
