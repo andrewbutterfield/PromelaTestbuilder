@@ -47,11 +47,11 @@ coverage-report: | check-env
 
 # sudo apt-get install python3-venv python3-dev
 env:
-	if python3.10 -m venv env; then \
+	if python3.14 -m venv env; then \
 	    :; \
 	else \
 	    echo failed to create venv; \
-	    echo Ensure python3.10-venv is installed; \
+	    echo Ensure python3.14-venv is installed; \
 	    exit 1; \
 	fi
 	. env/bin/activate && pip install --upgrade pip && pip install -r requirements.txt
