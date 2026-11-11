@@ -3,8 +3,6 @@ attrs>=22.2.0
 coconut>=2.2.0
 coverage>=7.1.0
 PyYAML>=6.0
-pyparsing<3
-cPyparsing>=2.4.7.1.2.0
 dill>=0.3.6
 exceptiongroup>=1.1.0
 flake8>=6.0.0

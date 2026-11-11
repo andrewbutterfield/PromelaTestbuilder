@@ -3,15 +3,15 @@
 
 DIR_SRC = src
 DIR_TESTS = $(DIR_SRC)/tests
-COCO_SRC_FILES = $(wildcard *.coco $(DIR_SRC)/*.coco $(DIR_TESTS)/*.coco)
-PY_GEN_FILES = $(patsubst %.coco,%.py,$(COCO_SRC_FILES))
+PY_GEN_FILES = $(wildcard *.py $(DIR_SRC)/*.py $(DIR_TESTS)/*.py)
+# PY_GEN_FILES = $(patsubst %.coco,%.py,$(PY_GEN_FILES))
 
 .PHONY: all py check format analyse metric git-hash-object-calculate sha512sum-calculate check-env coverage-report env clean
 
 all: check format analyse coverage-report
 
-%.py: %.coco | check-env
-	coconut --target 310 --recursion-limit 3000 $< $@
+# %.py: %.coco | check-env
+# 	coconut --target 310 --recursion-limit 3000 $< $@
 
 py: $(PY_GEN_FILES) | check-env
 
@@ -30,10 +30,10 @@ metric: $(PY_GEN_FILES) | check-env
 	python3 metrics.py $(PY_GEN_FILES)
 
 git-hash-object-calculate:
-	git hash-object $(COCO_SRC_FILES)
+	git hash-object $(PY_GEN_FILES)
 
 sha512sum-calculate:
-	sha512sum $(COCO_SRC_FILES)
+	sha512sum $(PY_GEN_FILES)
 
 check-env:
 	test -n "$$VIRTUAL_ENV"
