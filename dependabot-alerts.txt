@@ -1,0 +1,247 @@
+
+	
+andrewbutterfield’s personal account
+Warning!	
+andrewbutterfield / RTEMS-SMP-Formal
+Known security vulnerabilities detected
+
+Dependency
+future	
+Version
+<= 0.18.2	
+Upgrade to
+~> 0.18.3
+Defined in
+requirements.txt
+Vulnerabilities
+CVE-2022-40899 High severity
+Dependency
+Pygments	
+Version
+>= 1.1 < 2.7.4	
+Upgrade to
+~> 2.7.4
+Defined in
+requirements.txt
+Vulnerabilities
+CVE-2021-27291 High severity
+CVE-2021-20270 High severity
+CVE-2026-4539 Low severity
+CVE-2026-4539 Low severity
+CVE-2026-4539 Low severity
+View 3 more
+Dependency
+PyYAML	
+Version
+< 5.4	
+Upgrade to
+~> 5.4
+Defined in
+requirements.txt
+Vulnerabilities
+CVE-2020-14343 Critical severity
+Dependency
+py	
+Version
+< 1.10.0	
+Upgrade to
+~> 1.10.0
+Defined in
+requirements.txt
+Vulnerabilities
+CVE-2020-29651 High severity
+Dependency
+lxml	
+Version
+< 4.6.5	
+Upgrade to
+~> 4.6.5
+Defined in
+requirements.txt
+Vulnerabilities
+CVE-2026-41066 High severity
+CVE-2021-43818 Moderate severity
+CVE-2022-2309 Moderate severity
+Dependency
+numpy	
+Version
+>= 1.9.0 < 1.21	
+Upgrade to
+~> 1.21
+Defined in
+requirements.txt
+Vulnerabilities
+CVE-2021-33430 Moderate severity
+CVE-2021-34141 Moderate severity
+Dependency
+Pillow	
+Version
+< 9.0.0	
+Upgrade to
+~> 9.0.0
+Defined in
+requirements.txt
+Vulnerabilities
+CVE-2022-22817 Critical severity
+CVE-2023-50447 Critical severity
+CVE-2026-112403 Critical severity
+CVE-2022-24303 High severity
+CVE-2023-4863 High severity
+View 16 more
+Dependency
+pillow	
+Version
+< 9.2.0	
+Upgrade to
+~> 9.2.0
+Defined in
+requirements.txt
+Vulnerabilities
+CVE-2022-45198 High severity
+CVE-2023-44271 High severity
+CVE-2024-28219 High severity
+CVE-2026-54058 High severity
+CVE-2026-54059 High severity
+View 11 more
+Dependency
+certifi	
+Version
+>= 2017.11.05 < 2022.12.07	
+Upgrade to
+~> 2022.12.07
+Defined in
+requirements.txt
+Vulnerabilities
+GHSA-6q48-6c7w-9gw2 Critical severity
+CVE-2023-37920 High severity
+CVE-2024-39689 Low severity
+CVE-2022-23491 Moderate severity
+Dependency
+requests	
+Version
+>= 2.3.0 < 2.31.0	
+Upgrade to
+~> 2.31.0
+Defined in
+requirements.txt
+Vulnerabilities
+CVE-2023-32681 Moderate severity
+CVE-2024-35195 Moderate severity
+CVE-2024-47081 Moderate severity
+CVE-2026-25645 Moderate severity
+Dependency
+urllib3	
+Version
+< 1.26.17	
+Upgrade to
+~> 1.26.17
+Defined in
+requirements.txt
+Vulnerabilities
+CVE-2023-43804 High severity
+CVE-2025-66418 High severity
+CVE-2025-66471 High severity
+CVE-2026-21441 High severity
+CVE-2026-44431 High severity
+View 3 more
+Dependency
+jinja2	
+Version
+< 3.1.3	
+Upgrade to
+~> 3.1.3
+Defined in
+requirements.txt
+Vulnerabilities
+CVE-2024-22195 Moderate severity
+CVE-2024-56326 Moderate severity
+CVE-2024-56201 Moderate severity
+Dependency
+astropy	
+Version
+< 5.3.3	
+Upgrade to
+~> 5.3.3
+Defined in
+requirements.txt
+Vulnerabilities
+CVE-2023-41334 High severity
+Dependency
+idna	
+Version
+< 3.7	
+Upgrade to
+~> 3.7
+Defined in
+requirements.txt
+Vulnerabilities
+CVE-2024-3651 Moderate severity
+CVE-2026-45409 Moderate severity
+Dependency
+Jinja2	
+Version
+< 3.1.4	
+Upgrade to
+~> 3.1.4
+Defined in
+requirements.txt
+Vulnerabilities
+CVE-2024-34064 Moderate severity
+CVE-2025-27516 Moderate severity
+Dependency
+zipp	
+Version
+< 3.19.1	
+Upgrade to
+~> 3.19.1
+Defined in
+requirements.txt
+Vulnerabilities
+CVE-2024-5569 Moderate severity
+CVE-2024-5569 Moderate severity
+Dependency
+pytest	
+Version
+< 9.0.3	
+Upgrade to
+~> 9.0.3
+Defined in
+requirements.txt
+Vulnerabilities
+CVE-2025-71176 Moderate severity
+CVE-2025-71176 Moderate severity
+CVE-2025-71176 Moderate severity
+Dependency
+soupsieve	
+Version
+<= 2.8.3	
+Upgrade to
+~> 2.8.4
+Defined in
+requirements.txt
+Vulnerabilities
+CVE-2026-49477 High severity
+CVE-2026-49476 High severity
+CVE-2026-86000 Moderate severity
+CVE-2026-85999 Moderate severity
+Dependency
+sh	
+Version
+< 2.2.4	
+Upgrade to
+~> 2.2.4
+Defined in
+requirements.txt
+Vulnerabilities
+CVE-2026-54552 High severity
+Dependency
+pylint	
+Version
+< 4.0.9	
+Upgrade to
+~> 4.0.9
+Defined in
+requirements.txt
+Vulnerabilities
+CVE-2026-114608 Moderate severity
+CVE-2026-114608 Moderate severity
